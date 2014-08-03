@@ -1,3 +1,10 @@
-<h1>Welcome to <strong>LocateME</strong></h1>
-<p> Lets Get Started <%=link_to "Sign up", "#", class: "btn  btn-warning" %></p>
- 
+<div class="jumbotron center">
+     <h1>Welcome to my LocateME!</h1>
+     <% if user_signed_in? %>
+          # do something
+     <% else %>
+       <p>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
+</div>
